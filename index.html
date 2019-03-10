@@ -14,21 +14,25 @@
 <body>
     <h1>Array</h1>
     <script>
+
         debugger;
         var course = ['HTML', 11, 'JavaScript', 2, 'CSS', 23, 12];
         course.push(-5);
         console.log(course[7]);
         console.log(course);
+
         course.unshift(1000);
         console.log(course[0]);
         console.log(course);
-        alert(course);
+
         course.push('last array element');
-        alert(course);
         console.log(course.length);
         console.log(course[9]);
         alert('last element is ' + ' - ' + course[9]);
-        
+
+        course.splice(3, 1);
+        console.log(course);
+            
     </script>
 
 </body>
