@@ -15,7 +15,7 @@
     <h1>Array</h1>
     <script>
 
-        debugger;
+        
         var course = ['HTML', 11, 'JavaScript', 2, 'CSS', 23, 12];
         course.push(-5);
         console.log(course[7]);
@@ -33,27 +33,60 @@
         console.log(course);
 
 
-        var filteredcourse = course.filter (
-            function(el, id) {
-                return typeof el ==="number";
+        var filteredcourse = course.filter(
+            function (el, id) {
+                return typeof el === "number";
             }
         )
         console.log(filteredcourse);
+        
+        debugger;
 
-        var newarr = filteredcourse.map (
-            function(elem, i) {
-                return elem*elem;
-            }  
+        var newarr = filteredcourse.map(
+            function (elem, i) {
+                return elem * elem;
+            }
         )
         console.log(newarr);
 
-        var newarr1 = filteredcourse.map (
-            function(elem, i) {
+        var newarr1 = filteredcourse.map(
+            function (elem, i) {
                 return Math.pow(elem, 2);
             }
         )
         console.log(newarr1);
+
+        var largest = 0;
+        for (var i = 0; i < newarr1.length; i++) {
+            if (largest < newarr1[i]) {
+                largest = newarr1[i];
+            }
+        }
+        console.log(largest);
         
+     /*   var minim = 0;
+        for(var i = 0; i > newarr1.length; i++) {
+            if(minim > newarr1[i]) {
+                minim = newarr1[i]
+            }
+        }
+        console.log(minim);
+    */
+
+        var max = newarr1.reduce (
+            function(el, i) {
+                return Math.max (el, i);
+            }
+        )
+        console.log(max);
+
+        var min = newarr1.reduce (
+            function (el, i) {
+                return Math.min(el, i); 
+            }
+        )
+        console.log(min);
+
     </script>
 
 </body>
