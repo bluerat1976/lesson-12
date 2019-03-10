@@ -27,12 +27,19 @@
 
         course.push('last array element');
         console.log(course.length);
-        console.log(course[9]);
-        alert('last element is ' + ' - ' + course[9]);
+        console.log('last element is ' + ' - ' + course[9]);
 
         course.splice(3, 1);
         console.log(course);
-            
+
+
+        var filteredcourse = course.filter (
+            function(el, id) {
+                return typeof el ==="number";
+            }
+        )
+        console.log(filteredcourse);
+
     </script>
 
 </body>
